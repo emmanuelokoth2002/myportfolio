@@ -18,7 +18,7 @@ const projects = [
   // },
   {
     title: 'Real Estate Management System',
-    description: 'I collaborated wih senior software developer to build a comprehensive property management platform for landlords to efficiently manage their real estate portfolio. The system streamlines property listings, tenant management, rent collection, and maintenance requests.',
+    description: 'I collaborated with senior software developer to build a comprehensive property management platform for landlords to efficiently manage their real estate portfolio. The system streamlines property listings, tenant management, rent collection, and maintenance requests.',
     image: '/projects/real-estate.png',
     tech: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS', 'Bootstrap'],
     features: [
