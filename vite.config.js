@@ -6,7 +6,15 @@ export default defineConfig({
   plugins: [react()],
   base: '/myportfolio/',
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js',
+      }
+    }
   },
   server: {
     open: true,
