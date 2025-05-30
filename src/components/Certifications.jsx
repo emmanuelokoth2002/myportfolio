@@ -49,8 +49,8 @@ const certifications = [
       'Code Review',
       'Debugging'
     ],
-    pdfUrl: '/certificates/alx-certificate.pdf', // Place PDF in public/certificates/
-    imageUrl: '/certificates/alx-preview.png', // Place preview image in public/certificates/
+    pdfUrl: '/myportfolio/certificates/alx-certificate.pdf', // Updated path with base URL
+    imageUrl: '/myportfolio/certificates/alx-preview.png', // Updated path with base URL
     verifyLink: 'https://savanna.alxafrica.com/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBeFhRSUE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--9f786616f541edcc6794ea1605d342b24d5b5a14/17-short-specializations-certificate-emmanuel-okoth.png'
   },
   // {
