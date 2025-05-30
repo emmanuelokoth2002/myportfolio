@@ -60,7 +60,7 @@ const projects = [
       'Accessibility compliance',
       'Documentation'
     ],
-    github: '',
+    github: 'https://github.com/emmanuelokoth2002/myportfolio.git',
     demo: '',
     featured: true
   },
