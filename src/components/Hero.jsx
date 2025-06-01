@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import profilePhoto from '../assets/profile.jpg';
+import cvFile from '../assets/cv.pdf';
 
 const Hero = () => {
   return (
@@ -36,8 +37,8 @@ const Hero = () => {
                 Contact Me
               </motion.a>
               <motion.a
-                href="/myportfolio/cv.pdf"
-                download
+                href={cvFile}
+                download="Emmanuel_Otieno_CV.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 border-2 border-primary-600 dark:border-primary-400 rounded-lg font-medium shadow-lg hover:shadow-xl transition-all"
