@@ -36,7 +36,7 @@ const Hero = () => {
                 Contact Me
               </motion.a>
               <motion.a
-                href="/cv.pdf"
+                href="/myportfolio/cv.pdf"
                 download
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
