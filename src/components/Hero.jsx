@@ -1,8 +1,12 @@
 import { motion } from 'framer-motion';
-import profilePhoto from '../assets/profile.jpg';
+import { useState, useEffect } from 'react';
+import profilePhotoWebp from '../assets/profile.webp';
+import profilePhotoJpg from '../assets/profile.jpg';
 import cvFile from '../assets/cv.pdf';
 
 const Hero = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -59,12 +63,30 @@ const Hero = () => {
                 <div className="absolute inset-0 backdrop-blur-3xl rounded-2xl"></div>
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-64 h-64 rounded-full overflow-hidden">
-                  <img
-                    src={profilePhoto}
-                    alt="Emmanuel Otieno"
-                    className="w-full h-full object-cover"
+                <div className="w-64 h-64 rounded-full overflow-hidden relative">
+                  <div
+                    className={`absolute inset-0 transition-opacity duration-500 ${
+                      imageLoaded ? 'opacity-0' : 'opacity-100'
+                    }`}
+                    style={{
+                      backgroundColor: '#f3f4f6',
+                      filter: 'blur(20px)',
+                    }}
                   />
+                  <picture>
+                    <source srcSet={profilePhotoWebp} type="image/webp" />
+                    <img
+                      src={profilePhotoJpg}
+                      alt="Emmanuel Otieno"
+                      className={`w-full h-full object-cover transition-opacity duration-500 ${
+                        imageLoaded ? 'opacity-100' : 'opacity-0'
+                      }`}
+                      loading="eager"
+                      onLoad={() => setImageLoaded(true)}
+                      width={512}
+                      height={512}
+                    />
+                  </picture>
                 </div>
               </div>
             </div>
